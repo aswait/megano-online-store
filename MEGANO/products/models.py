@@ -12,6 +12,11 @@ def image_directory_path(instance: "Image", file_name: str) -> str:
 
 
 class Specification(models.Model):
+    """_summary_
+
+    Args:
+        models (_type_): _description_
+    """
     name = models.CharField(max_length=100, verbose_name="Имя")
     value = models.CharField(max_length=100, verbose_name="Значение")
 
@@ -29,6 +34,11 @@ class Tag(models.Model):
 
 
 class Image(models.Model):
+    """_summary_
+
+    Args:
+        models (_type_): _description_
+    """
     src = models.ImageField(
        upload_to=image_directory_path,
        verbose_name="Ссылка",
@@ -99,6 +109,11 @@ class Review(models.Model):
 
 
 class Product(models.Model):
+    """_summary_
+
+    Args:
+        models (_type_): _description_
+    """
     category = models.OneToOneField(
         Category,
         on_delete=models.CASCADE,
